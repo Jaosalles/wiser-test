@@ -1,0 +1,117 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "eslint:recommended"
+
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "jsx-a11y",
+        "import",
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier",
+        "eslint-plugin-import-helpers"
+    ],
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
+      "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft"] }],
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": "error",
+      "global-require": "off",
+      "react/jsx-curly-newline": "off",
+      "prettier/prettier": "error",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "import/prefer-default-export": "off",
+      "camelcase": "off",
+      "@typescript-eslint/ban-types": "off",
+      "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+      "no-use-before-define": "off",
+      "react/jsx-sort-props": [
+        "error",
+        {
+          "callbacksLast": false,
+          "shorthandFirst": false,
+          "shorthandLast": false,
+          "ignoreCase": true,
+          "noSortAlphabetically": false,
+          "reservedFirst": false
+        }
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": true,
+          "ignoreDeclarationSort": true,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }
+      ],
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": [
+            ["/react$/", "/styled-components/", "/redux-saga/effects/"],
+            "/react-redux/",
+            "/react-router-dom/",
+            "/^react/",
+            "module",
+            "/@shared/",
+            "/~/routes/",
+            "/~/assets/",
+            "/~/components/",
+            "/~/styles/",
+            "/~/store/",
+            "/~/utils/",
+            "/~/constants/",
+            "/~/services/"
+          ],
+          "alphabetize": {
+            "order": "asc",
+            "ignoreCase": true
+          }
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+}
